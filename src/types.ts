@@ -22,14 +22,14 @@ export type HealthCareDistrict =
   | "Vaasa"
   | "Varsinais-Suomi";
 export type InfectionSource = Id | "unknown" | "related to earlier";
-export type InfectionSourceCountry = string;
+export type InfectionSourceCountry = keyof typeof Country;
 
 export type CoronaConfirmed = {
   id: Id;
   date: ISO8601Date;
   healthCareDistrict: HealthCareDistrict;
   infectionSource: InfectionSource;
-  infectionSourceCountry: keyof typeof Country;
+  infectionSourceCountry: InfectionSourceCountry;
 };
 
 export type CoronaDeath = {
