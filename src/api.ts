@@ -1,56 +1,5 @@
 import axios from "axios";
-
-export type ISO8601Date = string;
-export type Id = number;
-export type HealthCareDistrict =
-  | "Etelä-Karjala"
-  | "Etelä-Pohjanmaa"
-  | "Etelä-Savo"
-  | "HUS"
-  | "Itä-Savo"
-  | "Kainuu"
-  | "Kanta-Häme"
-  | "Keski-Pohjanmaa"
-  | "Keski-Suomi"
-  | "Kymenlaakso"
-  | "Lappi"
-  | "Länsi-Pohja"
-  | "Pirkanmaa"
-  | "Pohjois-Karjala"
-  | "Pohjois-Pohjanmaa"
-  | "Pohjois-Savo"
-  | "Päijät-Häme"
-  | "Satakunta"
-  | "Vaasa"
-  | "Varsinais-Suomi";
-export type InfectionSource = Id | "unknown" | "related to earlier";
-export type InfectionSourceCountry = string;
-
-export type CoronaConfirmed = {
-  id: Id;
-  date: ISO8601Date;
-  healthCareDistrict: HealthCareDistrict;
-  infectionSource: InfectionSource;
-  infectionSourceCountry: InfectionSourceCountry;
-};
-
-export type CoronaDeath = {
-  id: Id;
-  date: ISO8601Date;
-  healthCareDistrict: HealthCareDistrict;
-};
-
-export type CoronaRecovered = {
-  id: Id;
-  date: ISO8601Date;
-  healthCareDistrict: HealthCareDistrict;
-};
-
-export type CoronaCases = {
-  confirmed: CoronaConfirmed[];
-  deaths: CoronaDeath[];
-  recovered: CoronaRecovered[];
-};
+import { CoronaCases } from "./types";
 
 export async function getCoronaCases() {
   const t1 = Date.now();

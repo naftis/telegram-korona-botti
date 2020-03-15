@@ -1,7 +1,8 @@
 import dotenv from "dotenv";
 dotenv.config();
 import TelegramBot from "node-telegram-bot-api";
-import { getCoronaCases, CoronaCases } from "./api";
+import { getCoronaCases } from "./api";
+import { CoronaCases } from "./types";
 
 const token = process.env.BOT_TOKEN;
 

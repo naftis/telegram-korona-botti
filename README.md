@@ -14,4 +14,4 @@ $ ☣️ Korona Suomessa
   😊 Parantuneet: 2
 ```
 
-Tarkoitus on pitää botti kevyenä, jotta sen voi helposti forkata omiin tarpeisiinsa. Tyypitys on myös melko tarkasti tehty (valtiot on tosin `string`, got no time fo dat).
+Tarkoitus on pitää botti kevyenä, jotta sen voi helposti forkata omiin tarpeisiinsa. Tyypitys on myös melko tarkasti tehty.
